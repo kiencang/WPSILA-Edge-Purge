@@ -1,11 +1,13 @@
 <?php
 /**
  * Plugin Name: WPSILA Edge Purge
- * Description: Giải pháp tối ưu hóa Cloudflare Edge Cache. Tự động xóa cache thông minh cho bài viết, chuyên mục, sản phẩm WooCommerce và bình luận.
+ * Description: Giải pháp tối ưu hóa Cloudflare Edge Cache. Tự động xóa cache thông minh cho bài viết, chuyên mục, và bình luận.
  * Version: 3.0 (Professional Refactored)
  * Author: WPSILA & AI
  * License: GPLv3
  */
+ 
+// có hỗ trợ sản phẩm WooCommerce, nhưng không cần thông báo điều này.
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -193,7 +195,7 @@ class WPSILA_CF_Purger {
         $is_configured = $this->is_ready();
         ?>
         <div class="wrap">
-            <h1><span class="dashicons dashicons-cloud"></span> WPSILA Edge Purge Pro</h1>
+            <h1><span class="dashicons dashicons-cloud"></span> WPSILA Edge Purge</h1>
             
             <?php
             if ( isset( $_POST['wpsila_manual_purge_all'] ) ) {
